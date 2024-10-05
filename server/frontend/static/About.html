@@ -1,68 +1,166 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <!-- Link the style sheet here -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Dealership</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: darkturquoise;
+        }
+
+        nav h2 {
+            color: white;
+        }
+
+        .banner {
+            background-color: #34495e;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .banner h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .banner p {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+        }
+
+        .card {
+            margin: 20px auto;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            border-radius: 50%;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .card-body h5 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .card-body p {
+            color: #555;
+        }
+
+        .card-body a {
+            color: #3498db;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .card-body a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .about-section {
+                flex-direction: column;
+            }
+
+            .card {
+                width: 80%;
+            }
+        }
+    </style>
 </head>
-<div>
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
-    <div class="container-fluid">
-      <h2 style="padding-right: 5%;">Dealerships</h2>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" style="font-size: larger;" aria-current="page" href="/">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" style="font-size: larger;" href="/about">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="font-size: larger;" href="/contact">Contact Us</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  
-    <div class="card" style="width: 80%;margin: auto; margin-top:5%;">
-      <div class="banner" name="about-header">
-      <!-- Insert header information here -->
-      </div>
-      <div style="display: flex;flex-direction: row; margin:auto">
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person1</p>
-          <p>Person1 Title</p>
-          <p class="card-text">Some text that explains the person1 in about 2 short sentences</p>
-          <p>person1@example.com</p>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <h2>Dealerships</h2>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" style="font-size: larger;" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" style="font-size: larger;" href="/about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="font-size: larger;" href="/contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
+    </nav>
 
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person2</p>
-          <p>Person2 Title</p>
-          <p class="card-text">Some text that explains the person2 in about 2 short sentences</p>
-          <p>person2@example.com</p>
+    <!-- Banner Section -->
+    <div class="banner">
+        <h1>About Us</h1>
+        <p>Welcome to Best Cars dealership, your trusted partner in buying and selling cars in North America. We offer a wide range of both domestic and imported vehicles at competitive prices, ensuring a seamless experience for our valued customers.</p>
+    </div>
+
+    <!-- Team Members -->
+    <div class="container about-section" style="display: flex; flex-wrap: wrap; justify-content: center;">
+        <!-- Team Member 1 -->
+        <div class="card" style="width: 30%;">
+            <img class="card-img-top" src="/static/person1.jpg" alt="Person1">
+            <div class="card-body">
+                <h5>John Doe</h5>
+                <p>Sales Manager</p>
+                <p>John has over 10 years of experience in the automotive industry and ensures that our customers get the best deals. He is passionate about providing excellent customer service and building lasting relationships.</p>
+                <a href="mailto:john@example.com">Email: john@example.com</a>
+            </div>
         </div>
-      </div>
 
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person3</p>
-          <p>Person3 Title</p>
-          <p class="card-text">Some text that explains the person3 in about 2 short sentences</p>
-          <p>person3@example.com</p>
+        <!-- Team Member 2 -->
+        <div class="card" style="width: 30%;">
+            <img class="card-img-top" src="/static/person2.jpg" alt="Person2">
+            <div class="card-body">
+                <h5>Jane Smith</h5>
+                <p>Customer Relations</p>
+                <p>Jane is the heart of our dealership, making sure every customer leaves happy and satisfied. She has a deep understanding of customer needs and goes above and beyond to ensure the best experience possible.</p>
+                <a href="mailto:jane@example.com">Email: jane@example.com</a>
+            </div>
         </div>
-      </div>
-    </div>
-    </div>
-    </div>
-    
-</div>
 
+        <!-- Team Member 3 -->
+        <div class="card" style="width: 30%;">
+            <img class="card-img-top" src="/static/person3.jpg" alt="Person3">
+            <div class="card-body">
+                <h5>Mark Wilson</h5>
+                <p>Finance Specialist</p>
+                <p>Mark has a background in finance and is dedicated to finding the best financing options for all our customers. He helps streamline the car-buying process and make it affordable for everyone.</p>
+                <a href="mailto:mark@example.com">Email: mark@example.com</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer style="background-color: #34495e; color: white; text-align: center; padding: 20px 0;">
+        <p>&copy; 2024 Best Cars Dealership. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS (Optional for responsive navbar) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gyb4sYQ6U+4g9KkR2sQF6fFf5nE5g5c5C5g5h5lxjHjRjjlXt" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzS8Be/fgjz3Pp3Imz9a1b+P0p/BeY2V5hIGR7h4OXa5" crossorigin="anonymous"></script>
+</body>
 </html>
